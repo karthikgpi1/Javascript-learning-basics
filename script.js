@@ -1,5 +1,5 @@
 
-//-------------fuction declaration---------------
+//-------------fuction declaration------------------------------
 
 // function kar(x = 40, y = 10) {                 //'saved for later use'
 //     if (x > 30) {                              // need a function name
@@ -20,7 +20,7 @@
 // console.log(foo(10,20,30));
 // console.log(foo(10,20,));
 
-//-------------function expressions or (anonymous)----------------------------
+//-------------function expressions or (anonymous)-----------------
 
 
 // var kar = function (x = 12, y = 30) {        // expression stored in a variable
@@ -49,7 +49,7 @@
 
 // })(60);
 
-//-------------
+//---------------
 
 // (function (){
 //     console.log('this is iife');
@@ -61,7 +61,7 @@
 //     console.log(value);
 // })('thank you')
 
-///---------------------------
+//---------------------------
 
 // function printing(){
 //     for(var i = 0; i<10; i++) {
@@ -69,7 +69,7 @@
 //     }
 // }
 
-//----------arrow function-----------------------------------------
+//----------arrow function------------------------
 
 // let age = 5;
 
@@ -79,7 +79,7 @@
 
 // welcome();
 
-//---------
+//--------------
 
 // var tt = (value) => {
 //     console.log("this is arrow func");
@@ -88,7 +88,7 @@
 
 // tt(12);
 
-//-----------
+//-------------
                                                 //es6
 // let y = (a, b) => {              //we don't need the 'function' keyword
 //     let result = a + b;          // ,'return' keyword and 'curly faces' 
@@ -98,7 +98,7 @@
 // let x = y(5,7);                   // using var
 // console.log(x);
 
-//-------------inside regular function-----------
+//-------------inside regular function-------------
 
 // function person() {
 //     this.name = 'karthik' ,
@@ -123,9 +123,7 @@
 // x.sayname();
 
 
-
-
-//-------------inside arrow function---------------
+//-------------inside arrow function-----------------
 
 
 // function person() {
@@ -150,7 +148,8 @@
 // const x = new person();
 // x.sayName();
 
-//----------------------------------------------------
+
+//-----------------------------------------------------------
 
 // let person = {
 
@@ -165,7 +164,7 @@
 //     person.sayName();
 
 
-//---------------function arguments------------------------------------
+//---------------function arguments-------------------------
 
 
 // x = findmax(1, 123, 500, 115, 44, 88);
@@ -185,9 +184,6 @@
 
 
 // printing()
-
-
-
 
 
 //------------square of a number------------
@@ -213,7 +209,7 @@
 // var x =square(5,4)
 // console.log(x);
 
-//---------------swapping two numbers--------------------------------------
+//---------------swapping two numbers---------------------
 
 
 
@@ -224,7 +220,9 @@
 
 // console.log('x:',x,'y:',y);
 
-//-------------swapping three numbers-------------------------------------
+
+
+//-------------swapping three numbers---------------------
 
 
 // var x = 20;
@@ -235,7 +233,8 @@
 
 // console.log('x:',x, 'y:',y, 'z:',z);
 
-//----------------------------------------
+
+//-----------------
 
 
 // var swap = function (x = 12, y = 30, z =100) {
@@ -256,5 +255,41 @@
 // console.log(x);
 
 
-//-----------------------------------------------------
+//------------------class------------------------------
 
+
+
+// function dog(name,sound) {
+//     this.name = name;
+//     this.sound = sound;
+        
+//     }
+    
+// var d = new dog("fido", "bark");
+// console.log(d);
+// console.log(d.name);
+// console.log(d.sound);
+
+//-----------------es5--------
+
+
+// function dog(name,sound) {
+//     this.name = name;
+//     this.sound = sound;
+
+//     this.getsound = function () {
+//         console.log(this.sound);
+//     };
+        
+//  }
+
+//  dog.prototype.getname = function () {
+//     console.log(this.name);
+//  };
+
+//  var d = new dog("fido", "bark");
+// console.log(d);
+// d.getname();
+// d.getsound();
+
+//--------------------------------
