@@ -88,7 +88,7 @@
 
 // tt(12);
 
-//-------------
+//-------------es6---------
                                                 //es6
 // let y = (a, b) => {              //we don't need the 'function' keyword
 //     let result = a + b;          // ,'return' keyword and 'curly faces' 
@@ -133,7 +133,7 @@
 //     this.place = 'vellore' ,
 //     this.sayName = function () {
         
-//         console.log(this.age);
+//         // console.log(this.age);
         
 
 //         let innerFunc = () => {
@@ -180,10 +180,6 @@
 // }
 // console.log(x);
 
-
-
-
-// printing()
 
 
 //------------square of a number------------
@@ -280,16 +276,156 @@
 //     this.getsound = function () {
 //         console.log(this.sound);
 //     };
+
+//     dog.prototype.getname = function () {
+//         console.log(this.name);
+//      };
         
 //  }
 
-//  dog.prototype.getname = function () {
-//     console.log(this.name);
-//  };
-
+ 
 //  var d = new dog("fido", "bark");
 // console.log(d);
 // d.getname();
 // d.getsound();
 
-//--------------------------------
+//-------------class-es6-------------------
+
+
+// class dog {
+//     constructor(name, sound) {
+//         this.name = name;                  //this is template
+//         this.sound= sound;
+//     }
+
+//     getName() {
+//         console.log(this.name);
+//     }
+    
+//     getSound() {
+//         console.log(this.sound);
+//     }
+// }
+
+// var dd = new dog ('puppy', 'bark');     //creating instances
+// dd.getName();
+// dd.getSound();
+
+
+//--------------getter & setter method----------------------------- 
+
+// class dog {
+//     getName() {
+//         console.log(this.name);        //getter
+//     }
+//     setName(name) {
+//         this.name = name;              //setter
+//     }
+//     getSound() {
+//         console.log(this.sound);
+//     }
+//     setSound(sound) {
+//         this.sound = sound;
+//     }
+// }
+
+// var dd = new dog();
+// dd.setName("puppy");      //only this order to write code to 
+// dd.getName();             //access in this method otherwise
+// dd.setSound("bark");      //its displayed "undefined"
+// dd.getSound();
+
+
+//--------------------------------------------
+
+
+// class Animal {
+//     constructor(legs, tail, gender) {          //this is parent
+//         this.legs = legs;
+//         this.tail = tail;
+//         this.gender = gender;
+//    }
+ 
+//        getLegs() {
+//         console.log(this.legs);
+//     }
+// }
+// class Dog extends Animal {
+//     constructor(name, sound) {                //this is child
+//         super(4, true, "male");
+//         this.name = name;
+//         this.sound = sound;
+//     }
+//    getData() {
+//         console.log(this.name, this.sound, this.tail, this.gender);
+//         this.getLegs();
+//     }   
+// }
+// var dd = new Dog("doggy", "bark");
+
+// dd.getData();
+
+
+//------------simple calculation---------------------
+
+
+
+// class bef {
+//     constructor(a,b) {
+//         this.a = a;
+//         this.b = b;
+//     }
+// }
+
+
+// class aft extends bef {
+//     constructor(a,b,c,d) {
+//         super(a,b);
+//         this.c = c;
+//         this.d = d;
+//     }
+
+//     getmulti() {
+//         console.log((this.a * this.b) + (this.c * this.d));
+//     }
+// }
+
+// let dd = new aft(5,6,7,8);
+// dd.getmulti();
+
+
+
+//-------------------------------
+
+
+// class Animal {
+//                                              //parent
+//        setTail(tail) {
+//         this.tail = tail
+//     }
+// }
+// class Dog extends Animal {
+//     constructor(name, sound, tail) {                //this is child
+//         super();
+//         super.setTail(tail);
+//         this.name = name;
+//         this.sound = sound;
+//     }
+//    getData() {
+//         console.log(this.name, this.sound, this.tail);
+        
+//     }   
+// }
+// var dd = new Dog("doggy", "bark", "true");
+
+// dd.getData();
+
+
+//-----------------------------------
+
+
+
+
+
+
+
