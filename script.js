@@ -296,8 +296,8 @@
 //     constructor(name, sound) {
 //         this.name = name;                  //this is template
 //         this.sound= sound;
-//     }
-
+//     }                            //constructor used to initialize
+                                    //object properties
 //     getName() {
 //         console.log(this.name);
 //     }
@@ -342,8 +342,8 @@
 // class Animal {
 //     constructor(legs, tail, gender) {          //this is parent
 //         this.legs = legs;
-//         this.tail = tail;
-//         this.gender = gender;
+//         this.tail = tail;                  //captital to start a word 
+//         this.gender = gender;              //is constrictor function
 //    }
  
 //        getLegs() {
@@ -424,6 +424,189 @@
 //-----------------------------------
 
 
+// class Myclass {
+//     constructor()
+//     {
+//         this.names_=[];       //setter is used to write the values
+//     }
+
+//     set name(value)
+//     {
+//         this.names_.push(value);
+//     }
+
+//     get name()              //getter is used to read the data
+//     {
+//         return this.names_[this.names_.length-1];
+//     }
+// }
+
+
+// const myclassInstance =new Myclass();
+// myclassInstance.name ="bob";
+// myclassInstance.name ="joe";
+
+// console.log(myclassInstance.name);
+// console.log(myclassInstance.names_);
+
+
+//----------------------------------------------
+
+
+
+// const classInstance = new class{
+//     get prop()                            //getter is used to print or get the data
+//     {
+//         return 100;
+//     }
+// }
+
+// classInstance.prop = 10;
+// console.log(classInstance.prop);
+
+
+// const classInstance =new class{
+//     set prop(value){
+    
+//         console.log('setting',value);
+//     }
+// }
+
+// classInstance.prop =10;
+// console.log(classInstance.prop);
+
+
+
+//------------methods-----------------------
+
+// class Test {
+//     constructor(data) {
+//         this.data = this.data;
+//     }
+//     m1(text) {
+//           return {
+//             data: this.data,
+//             text
+//           }
+//     }
+// }
+
+
+// var obj = new Test({})
+// obj.m1("texas")
+// console.log(obj.m1());
+
+
+//=--------------------------error
+
+// function person() {
+//     this.name ='joe' ;
+// }
+
+// function obj() {
+//     obj.call(this) ;
+// }
+
+// // obj.prototype = Object.create(person.prototype);
+// const app = new obj();
+// console.log(app.name);
+
+//-------------------------------------
+
+
+
+// var obj = {
+//     firstName: "john",
+//     lastName:"doe",
+
+//     address: {
+//         street:"main street",
+//         city:"new york",
+//         state:"ny",
+//         zip:10001,
+//     },
+
+//     getname: function () {
+//         return this.firstName + " " + this.lastName;
+//     },
+
+//     getaddress: function () {
+//         return this.address.zip;           //this key use only current obj
+//     },
+// };
+
+
+// console.log(obj);
+
+// console.log(obj.getname());
+
+// console.log(obj.getaddress());
+
+ 
+
+//----------------------call and apply----------
+
+
+// var person1 = {
+//     name: "john",
+//     age: 26,
+//     battery: 50,
+
+//     mobileCharge:function () {
+//         return (this.battery = 100);
+//     },
+        
+// };
+
+// var person2 = {
+//     name: "jane",
+//     age: 27,
+//     battery: 60,
+// };
+
+
+// console.log(person1.mobileCharge());
+//                                              //call takes objects(30,40)
+// console.log(person1);                        //apply takes array [30,40]
+
+// person1.mobileCharge.call(person2);   // otherwise call and apply both are same
+
+// console.log(person2);
+
+//---------------------------------------------
+
+
+// var person1 = {
+//     name: "john",
+//     age: 26,
+//     battery: 50,
+
+//     mobileCharge:function (x, y) {
+//         return (this.battery = x + y);
+//     },
+        
+// };
+
+// var person2 = {
+//     name: "jane",
+//     age: 27,
+//     battery: 60,
+// };
+
+
+// // console.log(person1.mobileCharge(70, 5));
+//                                              //call takes objects(40,5)
+// console.log(person1);                        //apply takes array [40,45]
+
+// person1.mobileCharge.call(person2, 40, 5);   // otherwise call and apply both are same
+
+// person1.mobileCharge.apply(person2, [40, 45]);
+
+// console.log(person2);
+
+
+
+//----------------------------------
 
 
 
