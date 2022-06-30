@@ -596,7 +596,7 @@
 
 // // console.log(person1.mobileCharge(70, 5));
 //                                              //call takes objects(40,5)
-// console.log(person1);                        //apply takes array [40,45]
+// // console.log(person1);                        //apply takes array [40,45]
 
 // person1.mobileCharge.call(person2, 40, 5);   // otherwise call and apply both are same
 
@@ -606,8 +606,32 @@
 
 
 
-//----------------------------------
+//---------------bind-------------------
 
+
+// var person1 = {
+//     name: "john",
+//     age: 26,
+//     battery: 50,
+//     mobileCharge:function (x, y) {
+//         return (this.battery = x + y);
+//     },
+        
+// };
+
+// var person2 = {
+//     name: "jane",
+//     age: 27,
+//     battery: 60,
+// };
+
+
+// var tt = person1.mobileCharge.bind(person2, 10, 77);
+
+// // tt();
+
+// console.log(tt);
+// console.log(person2);
 
 
 
